@@ -41,10 +41,10 @@ public class FindHops {
             return -1;
         }
 
-        int minimum = Integer.MAX_VALUE;
+        int minimum = arrCompartments.length;
         for (int i = start + 1; i <= compartment && i <= start + arrCompartments[start]; i++) {
             int hops = hops(arrCompartments, i, compartment);
-            if (hops != Integer.MAX_VALUE && hops + 1 < minimum) {
+            if (hops != arrCompartments.length && hops + 1 < minimum) {
                 minimum = hops + 1;
             }
         }
